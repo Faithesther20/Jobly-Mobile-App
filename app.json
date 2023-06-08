@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "Jobly_Mobile_App",
+    "slug": "Jobly_Mobile_App"
+  }
+}
