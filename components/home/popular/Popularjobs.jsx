@@ -17,8 +17,13 @@ const Popularjobs = () => {
       query:'React developer',
       num_pages:1
     }
-  )
-  console.log(data)
+  );
+
+    const [selectedJob, setSelectedJob] = useState()
+
+    const handleCardPress = (item) => {
+      
+    }
   return (
     <View style ={styles.container}>
       <View style={styles.header}>
@@ -43,7 +48,7 @@ const Popularjobs = () => {
           keyExtractor={(item) => item.job_id}
           contentContainerStyle ={{ columnGap: SIZES.medium}}
           horizontal
-          showsHorizontalScrollIndicator={false}
+          // showsHorizontalScrollIndicator={false}
           />
         )}
       </View>

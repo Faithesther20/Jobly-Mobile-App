@@ -11,11 +11,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginTop: SIZES.small,
+    paddingHorizontal:SIZES.medium,
   },
   headerTitle: {
     fontSize: SIZES.large,
     fontFamily: FONT.medium,
     color: COLORS.primary,
+   
   },
   headerBtn: {
     fontSize: SIZES.medium,
@@ -25,6 +27,7 @@ const styles = StyleSheet.create({
   cardsContainer: {
     marginTop: SIZES.medium,
     gap: SIZES.small,
+    paddingHorizontal:SIZES.medium,
   },
 });
 
