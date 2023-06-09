@@ -7,7 +7,7 @@ import styles from './welcome.style';
 import {icons, SIZES} from '../../../constants';
 
 
-const jobTypes = ["Full-time","Part-time","Contractor"]
+const jobTypes = ["Full-time","Part-time","Contractor", "Referee"]
 const Welcome = () => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] =useState("Full-time")
@@ -16,7 +16,7 @@ const Welcome = () => {
     <View>
       <View style={styles.container}>
         <Text style={styles.userName}>Hello Esther</Text>
-        <Text style={styles.userName}>Find your perfect job</Text>
+        <Text style={styles.welcomeMessage}>Find that perfect job</Text>
       </View>
 
       <View style={styles.searchContainer}>
@@ -41,15 +41,19 @@ const Welcome = () => {
           data ={jobTypes}
           renderItem={({item}) =>(
             <TouchableOpacity 
-            style ={styles.tab(activeJobType, item)}
-            onPress ={() =>{
-              setActiveJobType(item);
-              router.push('/search/${item}')
-            }}
+              style ={styles.tab(activeJobType, item)}
+              onPress ={() =>{
+                setActiveJobType(item);
+                router.push('/search/${item}')
+              }}
              >
               <Text style={styles.tabText(activeJobType,item)}>{item}</Text>
             </TouchableOpacity>
           )}
+          keyExtractor={item =>item}
+          contentContainerStyle={{ columnGap: SIZES.small}}
+          horizontal
+          showsHorizontalScrollIndicator={false}
           />
       </View>
     </View>
